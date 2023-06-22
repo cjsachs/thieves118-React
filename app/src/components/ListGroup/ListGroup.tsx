@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import './ListGroup.css'
+import { FaCity } from 'react-icons/fa'
 
 interface Props {
     items: string[],
@@ -9,7 +11,7 @@ const ListGroup = ({items, header}: Props) => {
   const [selectedIndex, setSelectedIndex] = useState(-1)
   return (
     <>
-      <h1>{header}</h1>
+      <h1 style={{color: 'white'}}>{header}<FaCity/></h1>
       {items.length === 1 && <h1>Items</h1>}
       <ul className="list-group">
         {items.map((item, index) => (
